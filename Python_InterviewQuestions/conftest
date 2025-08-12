@@ -1,0 +1,35 @@
+What is Use of conftest.py file in Python
+pytest?
+conftest.py is used to define fixtures and
+hooks that are shared across multiple test
+files.
+
+
+How do you execute only failed test cases in
+pytest?
+pytest --last-failed
+
+
+
+How do you apply a custom marker to a test
+case in pytest?
+import pytest
+@pytest.mark. sanity
+def test_example():
+assert True W
+
+cmd:pytest -m sanity
+
+
+
+What is the Python "with" statement designed
+for?
+The with statement is used for exception handling to make code cleaner and simpler. It is generally used for the management
+of common resources like creating, editing, and saving a file.
+
+Example:
+Instead of writing multiple lines of open, try, finally, and close, you can create and write a text file using the with statement. It
+is simple.
+with open('myfile.txt', 'w') as file:
+Ûdemy
+file.write('Hello world!')

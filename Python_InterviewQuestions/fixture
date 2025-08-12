@@ -1,0 +1,45 @@
+# Pytest Fixtures – Notes
+
+## Definition
+Fixtures in pytest are special functions that are used to set up the test environment before a test runs and clean it up afterward.
+
+They allow for:
+- Cleaner test code
+- Reusability of setup logic
+- Consistent and controlled test environments
+
+---
+
+## Key Features
+
+### Reusability
+- Write once, use in multiple tests
+- Avoids duplication of setup code
+
+### Automatic Setup & Teardown
+- Code **before `yield`** → runs before the test (setup)
+- Code **after `yield`** → runs after the test (teardown)
+
+### Scope Control
+- `function` → runs before each test (default)
+- `class` → runs once per test class
+- `module` → runs once per Python module
+- `session` → runs once for the whole test run
+
+### Dependency Injection
+- Fixtures are passed as arguments to test functions
+- Pytest automatically injects the fixture’s return value
+
+### Parameterization
+- Fixtures can run with multiple datasets using:
+```python
+@pytest.fixture(params=[...])
+
+# important questions
+
+What yield Does in a Fixture
+In pytest, a fixture can have two parts:
+
+Setup → runs before the test.
+
+Teardown → runs after the test.
