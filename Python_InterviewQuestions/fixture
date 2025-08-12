@@ -43,3 +43,12 @@ In pytest, a fixture can have two parts:
 Setup → runs before the test.
 
 Teardown → runs after the test.
+
+
+
+
+
+
+
+
+------------------------------Thank you------------------------------------
